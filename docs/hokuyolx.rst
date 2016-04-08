@@ -4,6 +4,11 @@ hokuyolx package
 Submodules
 ----------
 
+.. autoclass:: MyClass     
+   :members: 
+
+   .. automethod:: __init__
+
 hokuyolx.exceptions module
 --------------------------
 
