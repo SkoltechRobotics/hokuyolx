@@ -6,6 +6,9 @@ A Python module for working with Hokuyo LX laser scanners.
     :target: http://hokuyolx.readthedocs.org/en/latest/?badge=latest
     :alt: Documentation Status
 
+.. image:: https://img.shields.io/pypi/dm/hokuyolx.svg
+    :target: https://pypi.python.org/pypi/hokuyolx
+    :alt: PyPI downloads
 
 This module aims to implement communication protocol with Hokuyo
 laser rangefinder scaners, specifically with the following models:
