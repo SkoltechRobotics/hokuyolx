@@ -6,6 +6,7 @@ import numpy as np
 from codecs import encode, decode
 from .exceptions import HokuyoException, HokuyoStatusException
 from .exceptions import HokuyoChecksumMismatch
+from .statuses import activation_statuses, laser_states, tsync_statuses
 
 class HokuyoLX(object):
     '''Class for working with Hokuyo laser rangefinders, specifically
@@ -26,41 +27,6 @@ class HokuyoLX(object):
     convert_time = True #: To convert timestamps to UNIX time or not?
 
     _tn = 0 # Sensor timestamp overflow counter
-
-    _bm_statuses = {
-        '00': 'Normal. The sensor is in measurement state and the laser '
-              'was lighted.',
-        '01': 'The laser was not lighted due to unstable or '
-              'abnormal condition.',
-        '02': 'The sensor is already in measurement state and '
-              'the laser is already lighted.',
-    }
-
-    _laser_states = {
-        '000': 'Standby state',
-        '100': 'From standby to unstable state',
-        '001': 'Booting state',
-        '002': 'Time adjustment state',
-        '102': 'From time adjustment to unstable state',
-        '003': 'Single scan state',
-        '103': 'From single scan to unstable state',
-        '004': 'Multi scan state',
-        '104': 'From multi scan to unstable state',
-        '005': 'Sleep state',
-        '006': 'Waking-up state (Recovering from sleep state)',
-        '900': 'Error detected state',
-    }
-
-    _tsync_statuses = {
-        '00': 'Normal',
-        '01': 'Invalid parameter (control code).',
-        '02': 'TM0 request was received and the sensor already is in time '
-              'synchronization state.',
-        '03': 'TM2 request was received and the sensor already left the time '
-              'synchronization state.',
-        '04': 'TM1 request was received and the sensor is not in time '
-              'synchronization state.',
-    }
 
     def __init__(self, activate=True, info=True, tsync=True, addr=None,
                  buf=512, timeout=5, time_tolerance=300, logger=None,
@@ -340,9 +306,9 @@ class HokuyoLX(object):
         '''
         self.logger.info('Activating sensor')
         status, _ = self._send_req('BM')
-        if status not in self._bm_statuses:
+        if status not in activation_statuses:
             raise HokuyoStatusException(status)
-        return int(status), self._bm_statuses[status]
+        return int(status), activation_statuses[status]
 
     def standby(self):
         '''Stops the current measurement process and switches the sensor to the
@@ -736,12 +702,12 @@ class HokuyoLX(object):
             Status description of the executed command
         '''
         status, data = self._send_req('TM', str(code))
-        if status not in self._tsync_statuses:
+        if status not in self.tsync_statuses:
             raise HokuyoStatusException(status)
         if data:
-            return status, self._tsync_statuses[status], data[0]
+            return status, self.tsync_statuses[status], data[0]
         else:
-            return status, self._tsync_statuses[status]
+            return status, self.tsync_statuses[status]
 
     def tsync_enter(self):
         '''Transition from standby state to time synchronization state.'''
@@ -861,9 +827,9 @@ class HokuyoLX(object):
         if status != '00':
             raise HokuyoStatusException(status)
         state = data[0]
-        if state not in self._laser_states:
+        if state not in laser_states:
             raise HokuyoException('Unknown laser state code: %s' % state)
-        return int(state), self._laser_states[state]
+        return int(state), laser_states[state]
 
     def update_info(self):
         '''Updates sensor information stored inside object using

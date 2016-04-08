@@ -24,3 +24,9 @@ hokuyolx.exceptions module
     :members:
     :undoc-members:
     :show-inheritance:
+
+
+hokuyolx.statuses module
+------------------------
+
+.. automodule:: hokuyolx.statuses
