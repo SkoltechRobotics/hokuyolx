@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# hokyolx documentation build configuration file, created by
-# sphinx-quickstart on Fri Apr  8 14:29:18 2016.
+# hokuyolx documentation build configuration file, created by
+# sphinx-quickstart on Fri Apr  8 14:35:37 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -32,7 +32,6 @@ import os
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
-    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'hokyolx'
+project = 'hokuyolx'
 copyright = '2016, Artyom Pavlov'
 author = 'Artyom Pavlov'
 
@@ -125,7 +124,7 @@ html_theme = 'alabaster'
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-#html_title = 'hokyolx v0.8.1'
+#html_title = 'hokuyolx v0.8.1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -207,7 +206,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'hokyolxdoc'
+htmlhelp_basename = 'hokuyolxdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -229,7 +228,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'hokyolx.tex', 'hokyolx Documentation',
+    (master_doc, 'hokuyolx.tex', 'hokuyolx Documentation',
      'Artyom Pavlov', 'manual'),
 ]
 
@@ -259,7 +258,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'hokyolx', 'hokyolx Documentation',
+    (master_doc, 'hokuyolx', 'hokuyolx Documentation',
      [author], 1)
 ]
 
@@ -273,8 +272,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'hokyolx', 'hokyolx Documentation',
-     author, 'hokyolx', 'One line description of project.',
+    (master_doc, 'hokuyolx', 'hokuyolx Documentation',
+     author, 'hokuyolx', 'One line description of project.',
      'Miscellaneous'),
 ]
 
