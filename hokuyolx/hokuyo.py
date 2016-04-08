@@ -11,18 +11,18 @@ class HokuyoLX(object):
     '''Class for working with Hokuyo laser rangefinders, specifically
     with the following models: UST-10LX, UST-20LX, UST-30LX'''
 
-    addr = ('192.168.0.10', 10940) # IP address and port of the scanner
-    dmin = 20 # Minimum measurable distance (in millimeters)
-    dmax = 30000 # Maximum measurable distance (in millimeters)
-    ares = 1440 # Angular resolution (number of partitions in 360 degrees)
-    amin = 0 # Minimum step number of the scanning area
-    amax = 1080 # Maximum step number of the scanning area
-    aforw = 540 # Step number of the front direction
-    scan_freq = 40 # Scanning frequency in Hz
-    model = 'UST-10LX' # Sensor model
-    tzero = 0 # Sensor start time
-    sock = None # TCP connection socket to the sensor
-    logger = None # Logger instance for performing logging operations
+    addr = ('192.168.0.10', 10940) #: IP address and port of the scanner
+    dmin = 20 #: Minimum measurable distance (in millimeters)
+    dmax = 30000 #: Maximum measurable distance (in millimeters)
+    ares = 1440 #: Angular resolution (number of partitions in 360 degrees)
+    amin = 0 #: Minimum step number of the scanning area
+    amax = 1080 #: Maximum step number of the scanning area
+    aforw = 540 #: Step number of the front direction
+    scan_freq = 40 #: Scanning frequency in Hz
+    model = 'UST-10LX' #: Sensor model
+    tzero = 0 #: Sensor start time
+    sock = None #: TCP connection socket to the sensor
+    logger = None #: Logger instance for performing logging operations
     convert_time = True #: To convert timestamps to UNIX time or not?
 
     _tn = 0 # Sensor timestamp overflow counter
@@ -160,7 +160,7 @@ class HokuyoLX(object):
             return self._convert2ts(chars)
         return t
 
-    #Low level connection methods
+    #: Low level connection methods
 
     def _connect_to_laser(self, close=True):
         '''Connects to the sensor using parameters stored inide object'''
@@ -770,10 +770,10 @@ class HokuyoLX(object):
 
         Parameters
         ----------
-        N : int
-            Number of times to request time from the sensor
-        dt : float
-            Time between time requests
+        N : int, optional
+            Number of times to request time from the sensor (the default is 10)
+        dt : float, optional
+            Time between time requests (the default is 0.1)
         '''
         self.logger.info('Starting time synchronization.')
         self._force_standby()

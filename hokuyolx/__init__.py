@@ -8,7 +8,7 @@ documents:
 
 - https://www.hokuyo-aut.jp/02sensor/07scanner/download/pdf/UST_protocol_en.pdf
 
-Usage exmple:
+Usage example:
 
 >>> from hokuyolx import HokuyoLX
 >>> laser = HokuyoLX()

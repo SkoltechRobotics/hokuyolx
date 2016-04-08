@@ -9,7 +9,7 @@ Module contents
     :undoc-members:
     :show-inheritance:
 
-.. autoclass:: hokuyolx.HokuyoLX  
+.. autoclass:: hokuyolx.HokuyoLX
    :members:
 
    .. automethod:: __init__
@@ -24,6 +24,3 @@ hokuyolx.exceptions module
     :members:
     :undoc-members:
     :show-inheritance:
-
-
-
