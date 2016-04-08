@@ -30,3 +30,4 @@ hokuyolx.statuses module
 ------------------------
 
 .. automodule:: hokuyolx.statuses
+    :members:
