@@ -10,6 +10,8 @@ documents:
 
 Usage exmple:
 
+gfdfg
+
 >>> from hokuyolx import HokuyoLX
 >>> laser = HokuyoLX()
 >>> timestamp, scan = laser.get_dist() # One measurment mode
