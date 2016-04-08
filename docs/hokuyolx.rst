@@ -1,13 +1,21 @@
 hokuyolx package
 ================
 
-Submodules
-----------
+Module contents
+---------------
 
-.. autoclass:: MyClass     
+.. automodule:: hokuyolx
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. autoclass:: hokuyolx.HokuyoLX  
    :members: 
 
    .. automethod:: __init__
+
+Submodules
+----------
 
 hokuyolx.exceptions module
 --------------------------
@@ -17,19 +25,5 @@ hokuyolx.exceptions module
     :undoc-members:
     :show-inheritance:
 
-hokuyolx.hokuyo module
-----------------------
-
-.. automodule:: hokuyolx.hokuyo
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 
-Module contents
----------------
-
-.. automodule:: hokuyolx
-    :members:
-    :undoc-members:
-    :show-inheritance:
