@@ -10,7 +10,7 @@ Module contents
     :show-inheritance:
 
 .. autoclass:: hokuyolx.HokuyoLX  
-   :members: 
+   :members:
 
    .. automethod:: __init__
 

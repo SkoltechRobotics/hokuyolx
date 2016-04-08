@@ -20,8 +20,8 @@ class HokuyoStatusException(HokuyoException):
     }
     code = None
 
-    def __init__(self, code, *args, **kwargs):
-        super(HokuyoStatusException, self).__init__(*args, **kwargs)
+    def __init__(self, code):
+        super(HokuyoStatusException, self).__init__()
         self.code = code
 
     def get_status(self):

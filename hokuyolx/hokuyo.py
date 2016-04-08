@@ -11,35 +11,21 @@ class HokuyoLX(object):
     '''Class for working with Hokuyo laser rangefinders, specifically
     with the following models: UST-10LX, UST-20LX, UST-30LX'''
 
-    addr = ('192.168.0.10', 10940)
-    '''IP address and port of the scanner'''
-    dmin = 20
-    '''Minimum measurable distance (in millimeters)'''
-    dmax = 30000
-    '''Maximum measurable distance (in millimeters)'''
-    ares = 1440
-    '''Angular resolution (number of partitions in 360 degrees)'''
-    amin = 0
-    '''Minimum step number of the scanning area'''
-    amax = 1080
-    '''Maximum step number of the scanning area'''
-    aforw = 540
-    '''Step number of the front direction'''
-    scan_freq = 40
-    '''Scanning frequency in Hz'''
-    model = 'UST-10LX'
-    '''Sensor model'''
-    tzero = 0
-    '''Sensor start time'''
-    sock = None
-    '''TCP connection socket to the sensor'''
-    logger = None
-    '''Logger instance for performing logging operations'''
-    convert_time = True
-    '''To convert timestamps to UNIX time or not?'''
+    addr = ('192.168.0.10', 10940) # IP address and port of the scanner
+    dmin = 20 # Minimum measurable distance (in millimeters)
+    dmax = 30000 # Maximum measurable distance (in millimeters)'''
+    ares = 1440 # Angular resolution (number of partitions in 360 degrees)'''
+    amin = 0 # Minimum step number of the scanning area'''
+    amax = 1080 # Maximum step number of the scanning area'''
+    aforw = 540 # Step number of the front direction'''
+    scan_freq = 40 # Scanning frequency in Hz'''
+    model = 'UST-10LX' # Sensor model'''
+    tzero = 0 # Sensor start time'''
+    sock = None # TCP connection socket to the sensor'''
+    logger = None # Logger instance for performing logging operations'''
+    convert_time = True # To convert timestamps to UNIX time or not?'''
 
-    _tn = 0
-    '''Sensor timestamp overflow counter'''
+    _tn = 0 # Sensor timestamp overflow counter'''
 
     _bm_statuses = {
         '00': 'Normal. The sensor is in measurement state and the laser '

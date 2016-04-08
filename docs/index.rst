@@ -6,17 +6,29 @@
 Welcome to hokuyolx's documentation!
 ====================================
 
-Contents:
+Module contents
+---------------
 
-.. toctree::
-   :maxdepth: 2
+.. automodule:: hokuyolx
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. autoclass:: hokuyolx.HokuyoLX  
+   :members:
+
+   .. automethod:: __init__
+
+Submodules
+----------
+
+hokuyolx.exceptions module
+--------------------------
+
+.. automodule:: hokuyolx.exceptions
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
