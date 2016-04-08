@@ -12,12 +12,11 @@ setup(
     license='MIT',
     install_requires=['numpy'],
     zip_safe=True,
-    long_description='''
-        This module aims to implement communication protocol with Hokuyo
-        laser rangefinder scaners, specifically with the following models:
-        UST-10LX, UST-20LX, UST-30LX. It was tested only with UST-10LX but
-        should work with others as well. It's Python 2 and 3 compatible but
-        was mainly tested using Python 3.''',
+    long_description='This module aims to implement communication protocol '
+        'with Hokuyo laser rangefinder scaners, specifically with the'
+        'following models: UST-10LX, UST-20LX, UST-30LX. It was tested only '
+        'with UST-10LX but should work with others as well. It\'s '
+        'Python 2 and 3 compatible but was mainly tested using Python 3.',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
