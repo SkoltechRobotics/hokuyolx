@@ -1,8 +1,6 @@
 Welcome to hokuyolx's documentation!
 ====================================
 
-.. include:: ../README.rst
-
 Module contents
 ---------------
 
