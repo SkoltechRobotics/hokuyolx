@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
     name = 'hokuyolx',
     packages = ['hokuyolx'],
-    version = '0.8',
+    version = '0.8.1',
     description = 'Module for working with Hokuyo LX laser scanners.',
     author='Artyom Pavlov',
     author_email='newpavlov@gmail.com',
@@ -30,6 +30,5 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'Topic :: System :: Hardware',
-        'Topic :: Scientific/Engineering :: Robotics',
     ],
 )
