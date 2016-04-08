@@ -229,7 +229,7 @@ class HokuyoLX(object):
 
         num = self.amax - self.amin + 1
         space = np.linspace(self.amin, self.amax, num) - self.aforw
-        angles = np.pi*space/self.ares
+        angles = 2*np.pi*space/self.ares
         # TODO remake grouping
         return angles[start:end+1:grouping]
 
