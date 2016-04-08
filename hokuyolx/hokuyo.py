@@ -13,7 +13,6 @@ class HokuyoLX(object):
 
     addr = ('192.168.0.10', 10940)
     '''IP address and port of the scanner'''
-
     dmin = 20
     '''Minimum measurable distance (in millimeters)'''
     dmax = 30000
@@ -30,16 +29,12 @@ class HokuyoLX(object):
     '''Scanning frequency in Hz'''
     model = 'UST-10LX'
     '''Sensor model'''
-
     tzero = 0
     '''Sensor start time'''
-
     sock = None
     '''TCP connection socket to the sensor'''
-
     logger = None
     '''Logger instance for performing logging operations'''
-
     convert_time = True
     '''To convert timestamps to UNIX time or not?'''
 
