@@ -702,12 +702,12 @@ class HokuyoLX(object):
             Status description of the executed command
         '''
         status, data = self._send_req('TM', str(code))
-        if status not in self.tsync_statuses:
+        if status not in tsync_statuses:
             raise HokuyoStatusException(status)
         if data:
-            return status, self.tsync_statuses[status], data[0]
+            return status, tsync_statuses[status], data[0]
         else:
-            return status, self.tsync_statuses[status]
+            return status, tsync_statuses[status]
 
     def tsync_enter(self):
         '''Transition from standby state to time synchronization state.'''
