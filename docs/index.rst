@@ -8,7 +8,7 @@ Welcome to hokuyolx's documentation!
 
 Installation
 ------------
-You can install hokuyolx using `pip`::
+You can install hokuyolx using ``pip``::
 
     $ sudo pip install hokuyolx
 
