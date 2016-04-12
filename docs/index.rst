@@ -12,7 +12,7 @@ You can install python-twitter using `pip`::
 
     $ sudo pip install hokuyolx
 
-Or for Python 3:
+Or for Python 3::
 
     $ sudo pip install hokuyolx
 
