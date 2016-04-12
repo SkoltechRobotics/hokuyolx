@@ -8,13 +8,13 @@ Welcome to hokuyolx's documentation!
 
 Installation
 ------------
-Using `pip`:
+You can install python-twitter using `pip`::
 
-$ sudo pip install hokuyolx ::
+    $ sudo pip install hokuyolx
 
 Or for Python 3:
 
-$ sudo pip install hokuyolx ::
+    $ sudo pip install hokuyolx
 
 Module contents
 ---------------

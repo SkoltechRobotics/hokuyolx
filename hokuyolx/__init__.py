@@ -12,7 +12,7 @@ Usage example:
 
 >>> from hokuyolx import HokuyoLX
 >>> laser = HokuyoLX()
->>> timestamp, scan = laser.get_dist() # One measurment mode
+>>> timestamp, scan = laser.get_dist() # Single measurment mode
 >>> # Continous measurment mode
 >>> for timestamp, scan in laser.iter_dist(10):
 ...     print(timestamp)

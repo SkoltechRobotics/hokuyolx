@@ -10,6 +10,10 @@ A Python module for working with Hokuyo LX laser scanners.
     :target: https://pypi.python.org/pypi/hokuyolx
     :alt: PyPI version
 
+============
+Introduction
+============
+
 This module aims to implement communication protocol with Hokuyo
 laser rangefinder scaners, specifically with the following models:
 UST-10LX, UST-20LX, UST-30LX.
@@ -22,13 +26,35 @@ For protocol specifications please refer to the following documents:
 
 - https://www.hokuyo-aut.jp/02sensor/07scanner/download/pdf/UST_protocol_en.pdf
 
+==========
+Installing
+==========
 
-Installation
-------------
-Using `pip`:
+You can install python-twitter using `pip`::
 
-$ sudo pip install hokuyolx ::
+    $ sudo pip install hokuyolx
 
 Or for Python 3:
 
-$ sudo pip install hokuyolx ::
+    $ sudo pip install hokuyolx
+
+=============
+Documentation
+=============
+
+View the latest hokuyolx documentation at http://hokuyolx.rtfd.org/.
+
+=============
+Usage example
+=============
+
+Simple example::
+
+    >>> from hokuyolx import HokuyoLX
+    >>> laser = HokuyoLX()
+    >>> timestamp, scan = laser.get_dist() # Single measurment mode
+    >>> # Continous measurment mode
+    >>> for timestamp, scan in laser.iter_dist(10):
+    ...     print(timestamp)
+
+In addition to it you can view example applications inside `example/` directory.

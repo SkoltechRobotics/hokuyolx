@@ -890,17 +890,17 @@ class HokuyoLX(object):
         '''This command reboots the sensor and performs the following tasks:
 
         1. Waits for 1 second, during this time the host system disconnects
-        from the sensor.
+           from the sensor.
         2. The sensor stops all communications.
         3. Turns off (deactivates) the laser.
         4. Sets the motor rotational speed (scanning speed) to the default
-            initialization value.
+           initialization value.
         5. Sets the serial transmission speed (bit rate) to the default
-            initialization value.
+           initialization value.
         6. Sets the internal sensor timer to zero.
         7. Sets the measurement sensitivity to the default (normal) value.
         8. Initializes other internal parameters, and waits until the
-        scanning speed is stable.
+           scanning speed is stable.
         9. Switches to standby state.
 
         `reboot` is the only state transition command that can be received
