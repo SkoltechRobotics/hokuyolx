@@ -30,7 +30,7 @@ For protocol specifications please refer to the following documents:
 Installing
 ==========
 
-You can install python-twitter using `pip`::
+You can install hokuyolx using `pip`::
 
     $ sudo pip install hokuyolx
 
