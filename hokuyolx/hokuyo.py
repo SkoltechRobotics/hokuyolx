@@ -852,9 +852,9 @@ class HokuyoLX(object):
 
         1. Turns off (deactivates) the laser.
         2. Sets the motor rotational speed (scanning speed) to the default
-        initialization value.
+           initialization value.
         3. Sets the serial transmission speed (bit rate) to the default
-        initialization value.
+           initialization value.
         4. Sets the internal sensor timer to zero.
         5. Sets the measurement sensitivity to the default (normal) value.
 
