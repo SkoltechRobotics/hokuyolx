@@ -14,7 +14,7 @@ You can install python-twitter using `pip`::
 
 Or for Python 3::
 
-    $ sudo pip install hokuyolx
+    $ sudo pip3 install hokuyolx
 
 Module contents
 ---------------
