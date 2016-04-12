@@ -6,9 +6,9 @@ A Python module for working with Hokuyo LX laser scanners.
     :target: http://hokuyolx.readthedocs.org/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. image:: https://img.shields.io/pypi/dm/hokuyolx.svg
+.. image:: https://img.shields.io/pypi/v/hokuyolx.svg
     :target: https://pypi.python.org/pypi/hokuyolx
-    :alt: PyPI downloads
+    :alt: PyPI version
 
 This module aims to implement communication protocol with Hokuyo
 laser rangefinder scaners, specifically with the following models:
@@ -21,3 +21,14 @@ For protocol specifications please refer to the following documents:
 - http://www.hokuyo-aut.jp/02sensor/07scanner/download/pdf/UTM-30LX-EW_protocol_en.pdf
 
 - https://www.hokuyo-aut.jp/02sensor/07scanner/download/pdf/UST_protocol_en.pdf
+
+
+Installation
+------------
+Using `pip`:
+
+$ sudo pip install hokuyolx ::
+
+Or for Python 3:
+
+$ sudo pip install hokuyolx ::

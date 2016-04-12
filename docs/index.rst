@@ -1,13 +1,23 @@
 Welcome to hokuyolx's documentation!
 ====================================
 
-Module contents
----------------
-
 .. automodule:: hokuyolx
     :members:
     :undoc-members:
     :show-inheritance:
+
+Installation
+------------
+Using `pip`:
+
+$ sudo pip install hokuyolx ::
+
+Or for Python 3:
+
+$ sudo pip install hokuyolx ::
+
+Module contents
+---------------
 
 .. autoclass:: hokuyolx.HokuyoLX
    :members:

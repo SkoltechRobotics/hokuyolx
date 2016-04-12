@@ -894,9 +894,9 @@ class HokuyoLX(object):
         2. The sensor stops all communications.
         3. Turns off (deactivates) the laser.
         4. Sets the motor rotational speed (scanning speed) to the default
-        initialization value.
+            initialization value.
         5. Sets the serial transmission speed (bit rate) to the default
-        initialization value.
+            initialization value.
         6. Sets the internal sensor timer to zero.
         7. Sets the measurement sensitivity to the default (normal) value.
         8. Initializes other internal parameters, and waits until the
