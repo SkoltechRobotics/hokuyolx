@@ -10,6 +10,10 @@ A Python module for working with Hokuyo LX laser scanners.
     :target: https://pypi.python.org/pypi/hokuyolx
     :alt: PyPI version
 
+.. image:: https://img.shields.io/github/license/mashape/apistatus.svg
+    :target: https://github.com/SkRobo/hokuyolx/blob/master/LICENSE
+    :alt: MIT License
+
 ============
 Introduction
 ============
