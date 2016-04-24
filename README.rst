@@ -1,4 +1,6 @@
+*********
 Hokuyo LX
+*********
 
 A Python module for working with Hokuyo LX laser scanners.
 
