@@ -6,7 +6,7 @@ except ImportError:
 setup(
     name = 'hokuyolx',
     packages = ['hokuyolx'],
-    version = '0.8.2',
+    version = '0.8.3',
     description = 'Module for working with Hokuyo LX laser scanners.',
     author='Artyom Pavlov',
     author_email='newpavlov@gmail.com',

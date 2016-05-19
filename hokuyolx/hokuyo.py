@@ -264,7 +264,7 @@ class HokuyoLX(object):
         if imin is not None:
             data = data[data[:, 2] >= imin]
         if imax is not None:
-            data = data[data[:, 2] >= imax]
+            data = data[data[:, 2] <= imax]
         return data
 
     #Control of sensor state
@@ -796,13 +796,13 @@ class HokuyoLX(object):
 
     def sensor_state(self):
         '''Obtains status information of the sensor.
-        The `version` command is valid during any sensor state.'''
+        This command is valid during any sensor state.'''
         self._logger.info('Retrieving sensor state')
         return self._get_info('II')
 
     def version(self):
         '''Obtains manufacturing (version) information of the sensor.
-        The `version` command is valid during any sensor state.'''
+        This command is valid during any sensor state.'''
         self._logger.info('Retrieving manufacturing information of the sensor')
         return self._get_info('VV')
 
