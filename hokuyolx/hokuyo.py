@@ -129,7 +129,7 @@ class HokuyoLX(object):
     #: Low level connection methods
 
     def _connect_to_laser(self, close=True):
-        '''Connects to the sensor using parameters stored inide object'''
+        '''Connects to the sensor using parameters stored inside object'''
         if close:
             self.close()
         self._logger.info('Connecting to the laser')
@@ -270,7 +270,7 @@ class HokuyoLX(object):
     #Control of sensor state
 
     def _force_standby(self):
-        '''Forces standby state, if it unable to do it throws execption'''
+        '''Forces standby state, if it unable to do it throws an exception'''
         state, description = self.laser_state()
         if state in (3, 4, 5):
             self.standby()
@@ -808,8 +808,8 @@ class HokuyoLX(object):
 
     def sensor_parameters(self):
         '''Obtains sensor internal parameters information.
-        The `sensor_parameters` command is valid during any sensor state except
-        during the time synchronization state.'''
+        This command is valid during any sensor state except
+        the time synchronization state.'''
         self._logger.info('Retrieving sensor internal parameters')
         return self._get_info('PP')
 
@@ -832,7 +832,7 @@ class HokuyoLX(object):
         return int(state), laser_states[state]
 
     def update_info(self):
-        '''Updates sensor information stored inside object using
+        '''Updates sensor information stored in the object attributes using
         `sensor_parameters` method.'''
         self._logger.info('Updating sensor information')
         params = self.sensor_parameters()
@@ -903,7 +903,7 @@ class HokuyoLX(object):
            scanning speed is stable.
         9. Switches to standby state.
 
-        `reboot` is the only state transition command that can be received
+        It is the only state transition command that can be received
         during abnormal condition state
         '''
         self._logger.info('Reboot: sending first reboot command')
