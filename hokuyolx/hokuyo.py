@@ -65,6 +65,7 @@ class HokuyoLX(object):
         self.timeout = timeout
         self._logger = logging.getLogger('hokuyo') if logger is None else logger
         self.time_tolerance = time_tolerance
+        self.convert_time = convert_time
         self._connect_to_laser(False)
         if tsync:
             self.time_sync()
@@ -190,8 +191,8 @@ class HokuyoLX(object):
         resp = self._recv(header)
         if resp.pop(0) != header:
             raise HokuyoException('Response header mismatch')
-        q = resp.pop(0)
-        status = self._check_sum(q)
+        status_str = resp.pop(0)
+        status = self._check_sum(status_str)
         self._logger.debug('Got response with status %s', status)
         return status, resp
 
@@ -826,7 +827,7 @@ class HokuyoLX(object):
         status, data = self._send_req('%ST')
         if status != '00':
             raise HokuyoStatusException(status)
-        state = data[0]
+        state = self._check_sum(data[0])
         if state not in laser_states:
             raise HokuyoException('Unknown laser state code: %s' % state)
         return int(state), laser_states[state]
